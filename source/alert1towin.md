@@ -97,7 +97,7 @@ function escape(s) {
 <img alt="<a href="http://xxx" src="img123.gif">">http://xxx]]</a>
 ```
 開発者ツールでこの部分を検証してみると以下のようになっており、`<img>`タグに`http:`属性と`xxx`属性が付与されたことがわかります。  
-![markdown.png](https://github.com/mrypq/boilerplate/blob/master/source/markdown.png)  
+![markdown.png](https://github.com/mrypq/boilerplate/blob/master/img/markdown.png)  
 htmlにおける`//`が区切り文字となっているためこのようなことが起こります。  
 今回は存在しないgifの読み込みエラーが発生するため、`onerror`属性にスクリプトを仕込んだところ発火しました。  
 末尾をコメントアウトで排除し、文字数削って31文字。
