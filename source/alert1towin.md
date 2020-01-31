@@ -1,3 +1,15 @@
+---
+title: alert(1) to win Writeup
+date: 2019-01-30
+tags: ["XSS", "Challenge", "Security"]
+excerpt: alert(1) to win Writeup
+---
+# Alert(1) to win
+URL：https://alf.nu/alert(1)  
+XSS Challengeができるサイトです。  
+スコアの高さは文字数と反比例なので、コードゴルフみたいな一面もあります。
+
+
 # 問題一覧
 - [x] [Warmup](#Warmup)
 - [x] [Adobe](#Adobe)
@@ -85,6 +97,7 @@ function escape(s) {
 <img alt="<a href="http://xxx" src="img123.gif">">http://xxx]]</a>
 ```
 開発者ツールでこの部分を検証してみると以下のようになっており、`<img>`タグに`http:`属性と`xxx`属性が付与されたことがわかります。  
+![markdown.png](https://github.com/mrypq/boilerplate/blob/master/source/markdown.png)  
 htmlにおける`//`が区切り文字となっているためこのようなことが起こります。  
 今回は存在しないgifの読み込みエラーが発生するため、`onerror`属性にスクリプトを仕込んだところ発火しました。  
 末尾をコメントアウトで排除し、文字数削って31文字。
@@ -117,4 +130,4 @@ Comment#><iframe onload=alert(1)
 ```
 Firefoxなどでは`svg/onload`が使えるのでさらに短くなるはずだけど、うまくいきませんでした。何故…。
 
-## Callback
+## 以下随時更新予定
