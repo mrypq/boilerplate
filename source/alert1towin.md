@@ -1,7 +1,7 @@
 ---
 title: alert(1) to win Writeup
 date: 2019-01-30
-tags: ["XSS", "Challenge", "Security"]
+tags: ["XSS", "Writeup"]
 excerpt: alert(1) to win Writeup
 ---
 # Alert(1) to win
